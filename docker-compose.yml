@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: zx-single
+    restart: always
+    environment:
+      TZ: "Asia/Seoul"
+    command: sleep 24h
+    volumes:
+      - .:/root/zx/standalone2
+      #- ./a.js:/root/zx/a.js
+      #- ./b.js:/root/zx/b.js
